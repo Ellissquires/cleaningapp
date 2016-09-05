@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/contracts' , [
 
 	'uses' => 'ContractController@index',
@@ -47,3 +48,8 @@ Route::get('/jobs' , [
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/home', [
+    'uses' => 'HomeController@ViewUser',
+    'as' => 'home.viewUser',
+]);

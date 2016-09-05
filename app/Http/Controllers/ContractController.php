@@ -47,13 +47,14 @@ class ContractController extends Controller
                         ->withErrors($validator, 'createcontract')
                         ->withInput();
         }
+
         $contract = Contract::create([
 
             'contractname' => $request['contractname'],
             'startdate' => $request['startdate'],
             'enddate' => $request['enddate'],
-            'totalhours' => $request['hours'],
-            'hoursneeded' => $request['hours'],
+            'totalhours' => $request['totalhours'],
+            'hoursneeded' => $request['totalhours'],
 
             ]);
         return redirect()->back();

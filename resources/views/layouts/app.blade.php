@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-signin-client_id" content="799028135817-9hcodfpc66b8ofgfi8kf6c77fqb5ba29.apps.googleusercontent.com">
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -165,6 +166,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="{{ URL::asset('js/multipicker.min.js') }}"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 </html>
