@@ -6,7 +6,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
               <form action="" method="post">
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
               </form>
 
                 <div class="panel-heading">User details</div>

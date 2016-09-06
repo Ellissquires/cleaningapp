@@ -114,7 +114,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Cleaning App Build 0.0.1v
+                    Cleaning App
                 </a>
             </div>
 
