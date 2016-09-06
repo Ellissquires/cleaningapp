@@ -158,10 +158,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        /*
-        * Google calender service Providers
-        */
-         Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
 
     ],
 
