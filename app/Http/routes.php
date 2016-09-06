@@ -48,8 +48,3 @@ Route::get('/jobs' , [
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
-Route::post('/home', [
-    'uses' => 'HomeController@ViewUser',
-    'as' => 'home.viewUser',
-]);

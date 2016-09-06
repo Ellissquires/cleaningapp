@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-              <form action="{{ route('home.viewUser') }}" method="post">
+              <form action="" method="post">
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
               </form>
 

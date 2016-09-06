@@ -83,6 +83,8 @@ class AuthController extends Controller
             'saturdaypm' => $data['saturdaypm'],
             'sundayam' => $data['sundayam'],
             'sundaypm' => $data['sundaypm'],
+            'hours' => 0,
+            'payrate' => 0.00,
             'accounttype' => 'guest',
         ]);
     }
