@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -157,6 +157,11 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+        * Google calender service Providers
+        */
+         Spatie\GoogleCalendar\GoogleCalendarServiceProvider::class,
 
     ],
 

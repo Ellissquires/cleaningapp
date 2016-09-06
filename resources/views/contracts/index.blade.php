@@ -18,7 +18,7 @@
                         </div>
                         <div class="form-group{{ $errors->createcontract->has('totalhours') ? ' has-error' : '' }}">
                             <label for="password">Number of hours</label>
-                            <input type="text" name="totalhours" id="hours" placeholder="Hours" class="form-control">
+                            <input type="text" name="totalhours" id="totalhours" placeholder="Hours" class="form-control">
                             <div class="help-block">{{ $errors->createcontract->first('totalhours') }}</div>
                         </div>
 
