@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-signin-client_id" content="799028135817-9hcodfpc66b8ofgfi8kf6c77fqb5ba29.apps.googleusercontent.com">
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +19,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-   <link href="{{ URL::asset('css/multipicker.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/multipicker.min.css') }}" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato';
@@ -90,6 +89,25 @@
         .table-user-information > tbody > tr > td {
             border-top: 0;
         }
+        /* Responsive iFrame */
+
+        .responsive-iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .responsive-iframe-container iframe,
+        .vresponsive-iframe-container object,
+        .vresponsive-iframe-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
     <script type="text/javascript">
         function() submitForms{
@@ -114,7 +132,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Cleaning App
+                    Cleaning App - Build 0.0.1v
                 </a>
             </div>
 
@@ -166,7 +184,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="{{ URL::asset('js/multipicker.min.js') }}"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 </html>
