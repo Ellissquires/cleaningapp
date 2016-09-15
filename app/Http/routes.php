@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/contracts' , [
 
 	'uses' => 'ContractController@index',
-	'as' => 'contracts.index',
+	'as' => 'contracts.hold',
 ]);
 
 Route::get('/management' , [

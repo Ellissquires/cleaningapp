@@ -55,6 +55,8 @@ class ContractController extends Controller
             'enddate' => $request['enddate'],
             'totalhours' => $request['totalhours'],
             'hoursneeded' => $request['totalhours'],
+            'postcode' => $request['postcode'],
+            'description' => $request['description'],
 
             ]);
         return redirect()->back();

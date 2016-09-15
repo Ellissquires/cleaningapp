@@ -22,8 +22,12 @@
 
    <link href="{{ URL::asset('css/multipicker.min.css') }}" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Lato';
+
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          font-family: 'Lato';
         }
 
         .fa-btn {
@@ -91,6 +95,24 @@
             border-top: 0;
         }
 
+        #map {
+          height: 100%;
+        }
+
+        #floating-panel {
+          position: absolute;
+          top: 10px;
+          left: 25%;
+          z-index: 5;
+          background-color: #fff;
+          padding: 5px;
+          border: 1px solid #999;
+          text-align: center;
+          font-family: 'Roboto','sans-serif';
+          line-height: 30px;
+          padding-left: 10px;
+        }
+
     </style>
     <script type="text/javascript">
         function() submitForms{
@@ -98,9 +120,39 @@
               document.getElementById("regliform").submit();
              }
 
+       function initMap() {
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 8,
+           center: {lat: -34.397, lng: 150.644}
+         });
+         var geocoder = new google.maps.Geocoder();
+
+         document.getElementById('submit').addEventListener('click', function() {
+           geocodeAddress(geocoder, map);
+         });
+       }
+
+       function geocodeAddress(geocoder, resultsMap) {
+         var address = document.getElementById('address').value;
+         geocoder.geocode({'address': address}, function(results, status) {
+           if (status === 'OK') {
+             resultsMap.setCenter(results[0].geometry.location);
+             var marker = new google.maps.Marker({
+               map: resultsMap,
+               position: results[0].geometry.location
+             });
+           } else {
+             alert('Geocode was not successful for the following reason: ' + status);
+           }
+         });
+       }
+
+
     </script>
 </head>
+
 <body id="app-layout">
+
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -168,8 +220,12 @@
     <script src="{{ URL::asset('js/multipicker.min.js') }}"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
     <script src="{{ URL::asset('js/googlecalender.js') }}"></script>
+    <script src="{{ URL::asset('js/googlemaps.js') }}"></script>
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChaWi32vAUwShH-K2cA6sl-LWKQqvJNuc&callback=initMap"></script>
+
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+
 </body>
 </html>
