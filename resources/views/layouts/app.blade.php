@@ -90,6 +90,7 @@
         .table-user-information > tbody > tr > td {
             border-top: 0;
         }
+
     </style>
     <script type="text/javascript">
         function() submitForms{
@@ -166,7 +167,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="{{ URL::asset('js/multipicker.min.js') }}"></script>
     <script src="{{ URL::asset('js/app.js') }}"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="{{ URL::asset('js/googlecalender.js') }}"></script>
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
 </body>
 </html>
